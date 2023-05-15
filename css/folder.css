@@ -1,0 +1,84 @@
+*
+{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body
+{
+    height: 100svh;
+    width: 100svw;
+    display: grid;
+    place-items: center;
+    background: black;
+}
+
+.light-source
+{
+    height: 15rem;
+    width: 15rem;
+    background: radial-gradient(white , white , black , black);
+    display: grid;
+    place-items: center;
+}
+
+.folder
+{
+    height: 10rem;
+    width: 10rem;
+    position: relative;
+    animation-name: rotator;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    transform-style: preserve-3d;
+}
+.folder:hover
+{
+    cursor: pointer;
+}
+
+.folder__back,
+.folder__front
+{
+    scale: 0.95;
+    height: inherit;
+    width: inherit;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    bottom: 0;
+    display: grid;
+    place-items: center;
+}
+
+.folder__back
+{
+    background-image: url('../images/folder-back.png');
+}
+.folder__back > p
+{
+    transform: rotateY(180deg);
+}
+
+.folder__front
+{
+    bottom: 1.2rem;
+    height: 7.8rem;
+    border-radius: 1em 0 0 0;
+    background-image: url('../images/folder-front.png');
+    backface-visibility: hidden;
+}
+
+@keyframes rotator
+{
+    from
+    {
+        transform: rotateY(0);
+    }
+    to
+    {
+        transform: rotateY(360deg);
+    }
+}
