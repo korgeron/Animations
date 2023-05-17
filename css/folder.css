@@ -27,11 +27,9 @@ body
     height: 10rem;
     width: 10rem;
     position: relative;
-    animation-name: rotator;
-    animation-duration: 2.5s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
+    animation: rotator 2s linear infinite;
     transform-style: preserve-3d;
+    transition: 1s ease-in-out;
 }
 .folder:hover
 {
@@ -41,6 +39,7 @@ body
 .folder__back,
 .folder__front
 {
+    transition: 1s ease-in-out;
     scale: 0.95;
     height: inherit;
     width: inherit;
@@ -55,6 +54,7 @@ body
 
 .folder__back
 {
+    z-index: -2;
     background-image: url('../images/folder-back.png');
 }
 .folder__back > p
@@ -64,11 +64,23 @@ body
 
 .folder__front
 {
-    bottom: 1.2rem;
+    bottom: 1.35rem;
     height: 7.8rem;
     border-radius: 1em 0 0 0;
     background-image: url('../images/folder-front.png');
     backface-visibility: hidden;
+    /*animation:  2s forwards;*/
+    transform-origin: bottom;
+    z-index: -1;
+}
+
+.unselectable
+ {
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 @keyframes rotator
@@ -82,3 +94,35 @@ body
         transform: rotateY(360deg);
     }
 }
+
+@keyframes hide-text
+{
+    75%
+    {
+        color: transparent;
+    }
+    100%
+    {
+        color: transparent;
+    }
+}
+
+@keyframes folder-open
+{
+    0%
+    {
+        transform: rotateX(0);
+        backface-visibility: hidden;
+    }
+    75%
+    {
+/*        color: transparent;*/
+    }
+    100%
+    {
+        transform: rotateX(-190deg);
+        backface-visibility: visible;
+/*        color: transparent;*/
+    }
+}
+
