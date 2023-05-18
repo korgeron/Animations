@@ -83,6 +83,14 @@ body
     user-select: none;
 }
 
+.content
+{
+    height: 15rem;
+    width: 10rem;
+    position: relative;
+    bottom: 2rem;
+}
+
 @keyframes rotator
 {
     from
@@ -97,32 +105,31 @@ body
 
 @keyframes hide-text
 {
-    75%
+    0%
     {
-        color: transparent;
+        color: black;
     }
+
     100%
     {
         color: transparent;
     }
 }
 
-@keyframes folder-open
+@keyframes folder__front-open
 {
     0%
     {
         transform: rotateX(0);
         backface-visibility: hidden;
+
     }
-    75%
-    {
-/*        color: transparent;*/
-    }
+
     100%
     {
         transform: rotateX(-190deg);
         backface-visibility: visible;
-/*        color: transparent;*/
+     /*   color: transparent;*/
     }
 }
 
