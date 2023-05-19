@@ -89,7 +89,15 @@ body
     width: 10rem;
     position: relative;
     bottom: 2rem;
-    flex-direction: column;
+    display: grid;
+    opacity: 0;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+    padding-top: 2rem;
+    overflow-y: scroll;
+}
+.content::-webkit-scrollbar
+{
     display: none;
 }
 
@@ -147,18 +155,15 @@ body
     }
 }
 
-@keyframes folder__front-close
+@keyframes fade-in
 {
     0%
     {
-        transform: rotateX(-190deg);
-        backface-visibility: visible;
+        opacity: 0;
     }
 
     100%
     {
-        transform: rotateX(0);
-        backface-visibility: hidden;
-        /*   color: transparent;*/
+        opacity: 1;
     }
 }

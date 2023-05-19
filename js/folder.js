@@ -23,7 +23,8 @@ folder.addEventListener('click', ()=>{
             })
 
             folder_front.style.animation = 'folder__front-open 1s forwards';
-            content.style.display = 'flex';
+            content.style.animation = 'fade-in 1s .7s forwards';
+
         }
 
 })
