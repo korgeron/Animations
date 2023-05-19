@@ -1,4 +1,6 @@
 const folder = document.querySelector('.folder');
+const exit_folder = document.querySelector('.close-folder');
+const content = document.querySelector('.content');
 const folder_back = document.querySelector('.folder__back');
 const folder_front = document.querySelector('.folder__front');
 const texts = document.querySelectorAll('.unselectable');
@@ -21,6 +23,12 @@ folder.addEventListener('click', ()=>{
             })
 
             folder_front.style.animation = 'folder__front-open 1s forwards';
+            content.style.display = 'flex';
         }
+
+})
+
+exit_folder.addEventListener('click', ()=>{
+window.location.reload()
 
 })

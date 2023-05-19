@@ -89,6 +89,20 @@ body
     width: 10rem;
     position: relative;
     bottom: 2rem;
+    flex-direction: column;
+    display: none;
+}
+
+.close-folder
+{
+    position: absolute;
+    top: .5em;
+    right: .5em;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .1em;
 }
 
 @keyframes rotator
@@ -133,3 +147,18 @@ body
     }
 }
 
+@keyframes folder__front-close
+{
+    0%
+    {
+        transform: rotateX(-190deg);
+        backface-visibility: visible;
+    }
+
+    100%
+    {
+        transform: rotateX(0);
+        backface-visibility: hidden;
+        /*   color: transparent;*/
+    }
+}
