@@ -30,6 +30,5 @@ folder.addEventListener('click', ()=>{
 })
 
 exit_folder.addEventListener('click', ()=>{
-window.location.reload()
-
+    window.location.reload()
 })
