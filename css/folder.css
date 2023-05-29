@@ -55,7 +55,7 @@ body
 .folder__back
 {
     z-index: -2;
-    background-image: url('../images/folder-back.png');
+    background-image: url('IdeaProjects/korgeron.github.io/images/folder-back.png');
 }
 .folder__back > p
 {
@@ -67,7 +67,7 @@ body
     bottom: 1.35rem;
     height: 7.8rem;
     border-radius: 1em 0 0 0;
-    background-image: url('../images/folder-front.png');
+    background-image: url('IdeaProjects/korgeron.github.io/images/folder-front.png');
     backface-visibility: hidden;
     /*animation:  2s forwards;*/
     transform-origin: bottom;
